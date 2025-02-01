@@ -9,32 +9,4 @@ Given the number of weapons each soldier is holding, your task is to determine w
 
 // https://www.codechef.com/viewsolution/1128261700
 
-#include <stdio.h>
 
-int main() {
-    int N, i, Count_E = 0, Count_O = 0;
-
-    scanf("%d", &N);  // Read the number of elements
-    
-    int S[N];  // Correctly declare array
-
-    for (i = 0; i < N; i++) {
-        scanf("%d", &S[i]);  // Read the elements
-    }
-
-    for (i = 0; i < N; i++) {
-        if (S[i] % 2 == 0) {
-            Count_E++;  // Increment even count
-        } else {
-            Count_O++;  // Increment odd count
-        }
-    }
-
-    if (Count_E > Count_O) {
-        printf("READY FOR BATTLE\n");
-    } else {
-        printf("NOT READY\n");
-    }
-
-    return 0;
-}
